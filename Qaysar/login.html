@@ -1,85 +1,0 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>تسجيل الدخول | QAYSAR STORE</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="./assets/css/styles.css"/>
-</head>
-<body class="auth-body">
-  <div id="pageLoader" class="loader-overlay hidden">
-    <div class="loader-wrap">
-      <div class="loader-ring"></div>
-      <img src="./assets/img/logo.png" class="loader-logo" alt="logo" />
-    </div>
-  </div>
-  <div id="toast"></div>
-
-  <div class="auth-wrap">
-    <div class="auth-card fade-in-up">
-      <div class="auth-brand">
-        <img class="auth-logo" src="./assets/img/logo.png" alt="logo">
-        <div>
-          <div class="auth-title">QAYSAR STORE</div>
-          <div class="auth-sub">سجّل دخولك أو أنشئ حساب جديد</div>
-        </div>
-      </div>
-
-      <div class="tabs">
-        <button class="tab active" id="tabLogin">دخول</button>
-        <button class="tab" id="tabSignup">تسجيل</button>
-      </div>
-
-      <div id="loginBox">
-        <label class="label">الإيميل</label>
-        <input class="input" id="loginEmail" type="email" placeholder="example@gmail.com"/>
-
-        <label class="label">كلمة المرور</label>
-        <input class="input" id="loginPass" type="password" placeholder="••••••••"/>
-
-        <button class="btn primary" id="loginBtn"><i class="fa-solid fa-right-to-bracket"></i> دخول</button>
-
-        <div class="sep"><span>أو</span></div>
-        <button class="btn" id="googleBtn"><i class="fa-brands fa-google"></i> دخول عبر Google</button>
-      </div>
-
-      <div id="signupBox" class="hidden">
-        <label class="label">الاسم</label>
-        <input class="input" id="name" placeholder="اسمك"/>
-
-        <label class="label">الإيميل</label>
-        <input class="input" id="email" type="email" placeholder="example@gmail.com"/>
-
-        <label class="label">كلمة المرور</label>
-        <input class="input" id="pass" type="password" placeholder="••••••••"/>
-
-        <label class="label">واتساب (إجباري)</label>
-        <div class="wa-row">
-          <button class="wa-country" id="countryBtn" type="button">
-            <span id="countryFlag">🇯🇴</span>
-            <span id="countryCode">+962</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <input class="input" id="whatsapp" inputmode="numeric" placeholder="7xxxxxxxx" />
-        </div>
-        <div class="hint">اكتب الرقم بدون رمز الدولة.</div>
-
-        <div class="country-menu hidden" id="countryMenu"></div>
-
-        <button class="btn primary" id="signupBtn"><i class="fa-solid fa-user-plus"></i> إنشاء حساب</button>
-      </div>
-
-      <div class="hint">بالدخول أنت توافق على سياسة المتجر.</div>
-    </div>
-  </div>
-
-  <script type="module" src="./assets/js/app.js"></script>
-  <script type="module" src="./assets/js/login.js"></script>
-</body>
-</html>
