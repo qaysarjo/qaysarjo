@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>عرض حساب | QAYSAR STORE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="./assets/css/styles.css"/>
+</head>
+<body>
+  <div id="pageLoader" class="loader-overlay hidden"><div class="loader-wrap"><div class="loader-ring"></div><img src="./assets/img/logo.png" class="loader-logo" alt="logo"></div></div>
+  <div id="toast"></div>
+  <div id="sidebarOverlay" class="sidebar-overlay hidden"></div>
+
+  <div class="app app-shell app-drawer">
+    <aside class="sidebar drawer" id="sidebar" aria-hidden="true">
+      <div class="brand" onclick="location.href='./index.html'">
+        <img class="brand-logo" src="./assets/img/logo.png" alt="Logo">
+        <div><div class="brand-title">QAYSAR STORE</div><div class="brand-sub">متجر قيصر</div></div>
+      </div>
+      <nav class="nav">
+        <a class="nav-item" href="./index.html" data-nav><span><i class="fa-solid fa-house"></i> الرئيسية</span></a>
+        <a class="nav-item active" href="./sell.html" data-nav><span><i class="fa-solid fa-tag"></i> عرض حساب</span></a>
+        <a class="nav-item" href="./orders.html" data-nav><span><i class="fa-solid fa-bag-shopping"></i> طلباتي</span></a>
+        <a class="nav-item" href="./profile.html" data-nav><span><i class="fa-solid fa-user"></i> ملفي</span></a>
+
+        <div class="nav-section-title">الإعدادات</div>
+        <button class="nav-item btn-like" id="themeBtn" type="button"><span><i class="fa-solid fa-moon"></i> الوضع</span><span class="muted" id="themeLabel">داكن</span></button>
+        <button class="nav-item btn-like" id="currencyBtn" type="button"><span><i class="fa-solid fa-coins"></i> العملة</span><span class="muted" id="currencyLabel">JOD</span></button>
+
+        <div class="nav-divider"></div>
+        <a class="nav-item" href="./login.html" data-nav id="loginNav"><span><i class="fa-solid fa-right-to-bracket"></i> تسجيل / دخول</span></a>
+        <button class="nav-item btn-like danger hidden" id="logoutBtn" type="button"><span><i class="fa-solid fa-right-from-bracket"></i> تسجيل الخروج</span></button>
+      </nav>
+      <div class="sidebar-footer">© <span id="year"></span> QAYSAR STORE</div>
+    </aside>
+
+    <main class="main main-shell">
+      <header class="topbar">
+        <button class="icon-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+        <div class="topbar-title">
+          <div class="title">طلب عرض حساب</div>
+          <div class="subtitle">ارسل حسابك للمراجعة — شكل فخم وسهل</div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="panel fade-in-up">
+          <label class="label">عنوان الحساب</label>
+          <input class="input" id="title" placeholder="مثال: حساب VIP"/>
+
+          <label class="label">السعر + العملة</label>
+          <div class="wa-row">
+            <select class="input" id="currency" style="max-width:160px">
+              <option value="USD">USD $</option>
+              <option value="JOD">JOD د.أ</option>
+            </select>
+            <input class="input" id="price" type="number" step="0.01" min="0" placeholder="السعر"/>
+          </div>
+          <div class="hint" id="priceHint">—</div>
+
+          <label class="label">الوصف</label>
+          <textarea class="input" id="desc" rows="5" placeholder="اكتب وصف الحساب..."></textarea>
+
+          <label class="label">صور الحساب (إجباري) - اختر من الجهاز</label>
+          <input class="input" id="imagesFiles" type="file" accept="image/*" multiple />
+          <div class="hint">بعد اختيار الصور سيتم رفعها تلقائياً إلى IMGBB.</div>
+
+          <div id="imgsPreview" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); margin-top:10px"></div>
+
+          <label class="label">رابط فيديو (اختياري)</label>
+          <input class="input" id="videoUrl" placeholder="https://..."/>
+
+          <button class="btn primary" id="sendBtn" style="margin-top:12px">
+            <i class="fa-solid fa-paper-plane"></i> إرسال الطلب
+          </button>
+
+          <div class="hint">سيتم مراجعة طلبك من الأدمن ثم قبول/رفض.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./assets/js/app.js"></script>
+  <script type="module" src="./assets/js/sell.js"></script>
+</body>
+</html>

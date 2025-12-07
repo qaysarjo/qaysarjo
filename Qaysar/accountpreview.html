@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>عرض الحساب | QAYSAR STORE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="./assets/css/styles.css"/></head>
+<body>
+<div id="pageLoader" class="loader-overlay hidden"><div class="loader-wrap"><div class="loader-ring"></div><img src="./assets/img/logo.png" class="loader-logo" alt="logo"></div></div>
+<div id="toast"></div>
+<div id="sidebarOverlay" class="sidebar-overlay hidden"></div>
+
+<div class="app app-shell app-drawer">
+<aside class="sidebar drawer" id="sidebar" aria-hidden="true">
+  <div class="brand" onclick="location.href='./index.html'"><img class="brand-logo" src="./assets/img/logo.png" alt="logo">
+  <div><div class="brand-title">QAYSAR STORE</div><div class="brand-sub">متجر قيصر</div></div></div>
+
+  <nav class="nav">
+    <a class="nav-item" href="./index.html" data-nav><span><i class="fa-solid fa-house"></i> الرئيسية</span></a>
+    <a class="nav-item" href="./sell.html" data-nav><span><i class="fa-solid fa-tag"></i> عرض حساب</span></a>
+    <a class="nav-item" href="./orders.html" data-nav><span><i class="fa-solid fa-bag-shopping"></i> طلباتي</span></a>
+    <a class="nav-item" href="./profile.html" data-nav><span><i class="fa-solid fa-user"></i> ملفي</span></a>
+
+    <div class="nav-section-title">الإعدادات</div>
+    <button class="nav-item btn-like" id="themeBtn" type="button"><span><i class="fa-solid fa-moon"></i> الوضع</span><span class="muted" id="themeLabel">داكن</span></button>
+    <button class="nav-item btn-like" id="currencyBtn" type="button"><span><i class="fa-solid fa-coins"></i> العملة</span><span class="muted" id="currencyLabel">JOD</span></button>
+
+    <div class="nav-divider"></div>
+    <a class="nav-item" href="./login.html" data-nav id="loginNav"><span><i class="fa-solid fa-right-to-bracket"></i> تسجيل / دخول</span></a>
+    <button class="nav-item btn-like danger hidden" id="logoutBtn" type="button"><span><i class="fa-solid fa-right-from-bracket"></i> تسجيل الخروج</span></button>
+  </nav>
+  <div class="sidebar-footer">© <span id="year"></span> QAYSAR STORE</div>
+</aside>
+
+<main class="main main-shell">
+  <header class="topbar">
+    <button class="icon-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+    <div class="topbar-title">
+      <div class="title">عرض الحساب</div>
+      <div class="subtitle">تفاصيل كاملة + شراء</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="panel fade-in-up">
+      <div class="preview-wrap">
+        <div class="preview-media">
+          <img id="mainImg" class="img" style="height:320px" src="./assets/img/logo.png" alt="main"/>
+          <div id="thumbs" class="preview-thumbs"></div>
+          <video id="video" class="video hidden" controls></video>
+        </div>
+
+        <div class="preview-info">
+          <div class="preview-title" id="title">—</div>
+
+          <div class="preview-tags">
+            <span class="badge primary" id="priceBadge"><i class="fa-solid fa-coins"></i> —</span>
+            <span class="badge"><i class="fa-solid fa-shield-heart"></i> مضمون</span>
+            <span class="badge"><i class="fa-solid fa-bolt"></i> سريع</span>
+          </div>
+
+          <div class="preview-actions">
+            <button class="btn" id="downloadBtn"><i class="fa-solid fa-download"></i> تحميل الصور</button>
+            <button class="btn" id="copyLinkBtn"><i class="fa-regular fa-copy"></i> نسخ الرابط</button>
+          </div>
+
+          <div class="panel" style="margin-top:12px">
+            <div class="panel-title"><i class="fa-solid fa-align-left"></i> الوصف</div>
+            <pre class="desc" id="desc" style="margin-top:10px">—</pre>
+            <button class="btn small" id="copyDescBtn" style="margin-top:10px"><i class="fa-regular fa-copy"></i> نسخ الوصف</button>
+          </div>
+
+          <button class="btn primary" id="buyBtn" style="margin-top:12px"><i class="fa-solid fa-credit-card"></i> شراء الآن</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+</div>
+
+<script type="module" src="./assets/js/app.js"></script>
+<script type="module" src="./assets/js/accountpreview.js"></script>
+</body></html>
